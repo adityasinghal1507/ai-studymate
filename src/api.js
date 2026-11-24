@@ -2,7 +2,7 @@ export async function postJson(path, body) {
   let response;
 
   try {
-    response = await fetch(`http://localhost:5000${path}`, {
+    response = await fetch(`https://ai-studymate-backend-c2lm.onrender.com${path}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,3 +26,4 @@ export async function postJson(path, body) {
 
   return data;
 }
+

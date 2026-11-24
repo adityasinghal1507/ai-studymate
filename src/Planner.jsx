@@ -26,7 +26,7 @@ function Planner() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/generate-plan",
+        "https://ai-studymate-backend-c2lm.onrender.com/api/generate-plan",
         {
           method: "POST",
           headers: {
@@ -221,3 +221,4 @@ function Planner() {
 }
 
 export default Planner;
+
