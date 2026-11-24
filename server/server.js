@@ -9,7 +9,14 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://ai-studymate-ten.vercel.app",
+    ],
+  })
+);
 app.use(express.json());
 
 if (!process.env.GEMINI_API_KEY) {
